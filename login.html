@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Rent House</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="glass">
+  <div class="container">
+    <div class="logo">RentHouse</div>
+    <h2>Login</h2>
+    <form method="POST" action="php/login.php">
+      <label>User Type</label>
+      <select name="user_type" required>
+        <option value="">Select</option>
+        <option value="renter">Renter</option>
+        <option value="owner">House Owner</option>
+        <option value="admin">Admin</option>
+      </select>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="you@example.com" required />
+      <label>Password</label>
+      <input type="password" name="password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register</a><br><a href="forgot-password.html">Forgot Password?</a></p>
+  </div>
+</body>
+</html>

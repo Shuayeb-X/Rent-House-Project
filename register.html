@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - Rent House</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="glass">
+  <div class="container">
+    <div class="logo">RentHouse</div>
+    <h2>Register</h2>
+    <form id="registerForm" method="POST" action="php/register.php">
+      <label>User Type</label>
+      <select name="user_type" required>
+        <option value="">Select</option>
+        <option value="renter">Renter</option>
+        <option value="owner">House Owner</option>
+        <option value="admin">Admin</option>
+      </select>
+      <label>First Name</label>
+      <input type="text" name="first_name" required />
+      <label>Last Name</label>
+      <input type="text" name="last_name" required />
+      <label>Mobile Number</label>
+      <input type="tel" name="mobile" required />
+      <label>Birth Certificate / NID</label>
+      <input type="text" name="nid" required />
+      <label>Email</label>
+      <input type="email" name="email" required />
+      <label>Password</label>
+      <input type="password" name="password" required />
+      <label>Confirm Password</label>
+      <input type="password" name="confirm_password" required />
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      const pw = this.password.value, cpw = this.confirm_password.value;
+      if (pw !== cpw) { e.preventDefault(); alert("Passwords do not match!"); }
+    });
+  </script>
+</body>
+</html>
